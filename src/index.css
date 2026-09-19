@@ -1,0 +1,90 @@
+@import "tailwindcss";
+@theme {
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  --font-serif: Georgia, serif;
+  --color-ink: #171716;
+  --color-cream: #f7f5f0;
+  --color-sand: #e9e3d8;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+:focus-visible {
+  outline: 2px solid #171716;
+  outline-offset: 3px;
+}
+.serif {
+  font-family: var(--font-serif);
+}
+.page {
+  max-width: 1440px;
+  margin: auto;
+  padding: 3rem 5vw;
+}
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.field {
+  width: 100%;
+  border: 1px solid #cfc9bd;
+  background: #fffdf9;
+  padding: 0.8rem 0.9rem;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.2rem;
+  border: 1px solid #171716;
+  transition: 0.2s ease;
+}
+.btn-dark {
+  background: #171716;
+  color: white;
+}
+.btn-dark:hover {
+  background: #3b3a36;
+}
+.btn-light:hover {
+  background: #e9e3d8;
+}
+.product-image {
+  width: 100%;
+  aspect-ratio: 0.76;
+  object-fit: cover;
+  background: #e9e3d8;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .fade {
+    animation: fade 0.5s ease both;
+  }
+  @keyframes fade {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
